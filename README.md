@@ -1,131 +1,73 @@
-🛍️ Amazon Product Scraper
-A web scraping tool to extract Amazon product data in real-time
+# Amazon Product Scraper
 
-Node.js
-Express
-Web Scraping
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![Express](https://img.shields.io/badge/Express-4.x-blue)
+![License](https://img.shields.io/badge/License-MIT-orange)
 
-📌 Table of Contents
-✨ Features
+A web scraper that extracts product data from Amazon Brazil search results.
 
-🛠️ Technologies
+## 📋 Features
 
-🚀 Installation
+- Scrapes product titles, ratings, reviews, images and prices
+- Simple API endpoint (`/api/scrape`)
+- Clean responsive frontend interface
+- Error handling and validation
 
-📡 API Usage
+## 🛠️ Technologies
 
-🖥️ Frontend
+### Backend
+- Node.js
+- Express
+- Axios (HTTP requests)
+- JSDOM (HTML parsing)
+- CORS (Cross-origin requests)
 
-⚠️ Disclaimer
+### Frontend
+- Vanilla JavaScript
+- HTML5
+- CSS3 (Flexbox/Grid)
 
-✨ Features
-✅ Scrapes Amazon Brazil search results
+## 🚀 Installation
 
-Product title
-
-Rating (stars)
-
-Number of reviews
-
-Product image
-
-Price
-
-Direct product link
-
-✅ Simple API endpoint (/api/scrape)
-✅ Responsive frontend interface
-✅ Error handling (failed requests, missing data)
-✅ Educational project (learn web scraping)
-
-🛠️ Technologies
-Tech	Use Case
-Node.js	Backend runtime
-Express	API server
-Axios	HTTP requests to Amazon
-JSDOM	HTML parsing/DOM manipulation
-CORS	Cross-origin requests
-🚀 Installation
-1. Clone the repository
-bash
-Copy
+1. Clone the repository:
+```
 git clone https://github.com/yourusername/amazon-scraper.git
 cd amazon-scraper
-2. Install dependencies
-bash
-Copy
-npm install express axios jsdom cors
-3. Start the server
-bash
-Copy
+```
+2. Install dependencies:
+```
+npm install
+```
+3. Start the server:
+```
 node server.js
-4. Access the application
-🌐 Open in browser:
-
-http
-Copy
+```
+4. Access in your browser:
+```
 http://localhost:3000
-📡 API Usage
-Endpoint
-http
-Copy
+```
+## 📚 Usage
+API Endpoint
+```
 GET /api/scrape?keyword=SEARCH_TERM
-Example Request
-bash
-Copy
-curl "http://localhost:3000/api/scrape?keyword=iphone+15"
-Example Response
-json
-Copy
+```
+Example response:
+```
 [
   {
-    "title": "iPhone 15 Pro Max (256GB) - Titanium Black",
-    "rating": "4.7",
-    "reviews": "1245",
+    "title": "iPhone 14 Pro Max 128GB - Space Black",
+    "rating": "4.8",
+    "reviews": "3421",
     "image": "https://m.media-amazon.com/images/I/61...jpg",
-    "price": "R$ 8.999",
-    "link": "https://www.amazon.com.br/iPhone-15-Pro-Max-256GB/dp/..."
+    "price": "R$ 7.599",
+    "link": "https://www.amazon.com.br/iPhone-14-Pro-Max-128GB/dp/..."
   }
 ]
-🖥️ Frontend
-Screenshot
+```
 
-Features
-🔹 Search bar for keywords
-🔹 Clean product card display
-🔹 Responsive design (works on mobile/desktop)
-🔹 Loading states and error messages
+## Frontend Interface
+Enter search term (e.g. "God of War")
 
-How to Use
-Enter a product name (e.g., "AirPods Pro")
+Click "Search" button
 
-Click "Search"
-
-View scraped results
-
-⚠️ Disclaimer
-This project is for educational purposes only
-
-Amazon may block frequent scraping attempts
-
-Not affiliated with Amazon.com
-
-Use official Amazon APIs for production
-
-📜 License
-MIT License © 2023 - [Your Name]
-
-🌟 Happy Scraping!
-
-🔗 Quick Links
-Deploy on Vercel
-Report a Bug
-
-📌 Pro Tip: For large-scale scraping, use proxies and rate limiting!
-
-🎯 Roadmap
-Add pagination
-
-Price history tracking
-
-Email alerts for price drops
+View formatted results
